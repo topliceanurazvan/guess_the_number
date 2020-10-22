@@ -1,1 +1,1 @@
-guess_the_number
+React Native app for guessing a number
