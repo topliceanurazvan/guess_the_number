@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 
+import Colors from "./constants/colors";
+
 import Header from "./components/Header";
 import StartGameScreen from "./screens/StartGameScreen";
 
@@ -16,6 +18,6 @@ export default function App() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: "#f2f2f2",
+    backgroundColor: Colors.background,
   },
 });
