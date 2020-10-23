@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Alert,
   Button,
   Keyboard,
   StyleSheet,
@@ -28,7 +29,14 @@ const StartGameScreen = () => {
 
   const confirmInputHandler = () => {
     const chosenNumber = parseInt(enteredValue);
-    if (chosenNumber === NaN || chosenNumber <= 0 || chosenNumber >= 99) return;
+    if (isNaN(chosenNumber) || chosenNumber <= 0 || chosenNumber >= 99) {
+      Alert.alert(
+        "Invalid number!",
+        "Number has to be a number between 1 and 99.",
+        [{ text: "Okay", style: "destructive", onPress: resetInputHandler }]
+      );
+      return;
+    }
 
     setConfirmed(true);
     setSelectedNumber(parseInt(enteredValue));
