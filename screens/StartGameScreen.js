@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginVertical: 10,
     color: Colors.dark,
+    fontFamily: "open-sans-bold",
   },
 });
 
